@@ -18,7 +18,7 @@ let genesis = {
     },
     "nonce": "0x0",
     "timestamp": "0x0",
-    "gasLimit": "0x989680",
+    "gasLimit": "0x47b760",
     "difficulty": "0x1",
     "coinbase": "0x0000000000000000000000000000000000000000",
     "number": "0x0",

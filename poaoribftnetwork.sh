@@ -172,8 +172,8 @@ elif [ ${ARGS_LENGTH} -eq "3" ]; then
         createGenesis
 
         initialiseNodes
-        
         exit 1
+
         createBootNodeKey
 
         launchBootNode
