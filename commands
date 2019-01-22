@@ -1,0 +1,32 @@
+istanbul/bootnode -nodekey "/home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/boot.key" -verbosity 9 -addr :4800
+
+/home/admin1/go-ethereum-feature-faulty_nodes/build/bin/geth attach ipc:/home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/node2/geth.ipc
+
+/home/admin1/go-ethereum-feature-faulty_nodes/build/bin/geth --datadir /home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/node2 --nodekey /home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/node2/node.key --syncmode 'full' --port 4802 --rpcport 9502 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --bootnodes 'enode://@127.0.0.1:4800' --networkid 2017 --gasprice '0' -unlock "0x0fa8ea59406d05d3cbed08b1ce75fb0671985ddd" --password /home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/passwd.txt --debug --mine --minerthreads '1' --etherbase "0x0fa8ea59406d05d3cbed08b1ce75fb0671985ddd"
+
+/home/admin1/go-ethereum-feature-faulty_nodes/build/bin/geth attach ipc:/home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/node1/geth.ipc
+
+/home/admin1/go-ethereum-feature-faulty_nodes/build/bin/geth --datadir /home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/node1 --nodekey /home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/node1/node.key --syncmode 'full' --port 4801 --rpcport 9501 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --bootnodes 'enode://@127.0.0.1:4800' --networkid 2017 --gasprice '0' -unlock "0x75093242baffbb4a5b271b3b2fee9c58810a9222" --password /home/admin1/devnet4_ibft/istanbul/poaoribftnetwork/passwd.txt --debug --mine --minerthreads '1' --etherbase "0x75093242baffbb4a5b271b3b2fee9c58810a9222"
+
+geth --datadir node1 --nodekey node1/node.key --syncmode 'full' --port 4801 --rpcport 9501 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node2 --istanbul.faultymode 2 --nodekey node2/node.key --syncmode 'full' --port 4802 --rpcport 9502 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node3 --nodekey node3/node.key --syncmode 'full' --port 4803 --rpcport 9503 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node4 --nodekey node4/node.key --syncmode 'full' --port 4804 --rpcport 9504 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node5 --nodekey node5/node.key --syncmode 'full' --port 4805 --rpcport 9505 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node6 --nodekey node6/node.key --syncmode 'full' --port 4806 --rpcport 9506 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node7 --nodekey node7/node.key --syncmode 'full' --port 4807 --rpcport 9507 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node8 --nodekey node8/node.key --syncmode 'full' --port 4808 --rpcport 9508 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node9 --nodekey node9/node.key --syncmode 'full' --port 4809 --rpcport 9509 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+geth --datadir node10 --nodekey node10/node.key --syncmode 'full' --port 4810 --rpcport 9510 --rpc --rpcaddr '0.0.0.0' --rpccorsdomain '*' --rpcapi 'personal,db,eth,net,web3,txpool,miner,istanbul,clique' --networkid 2017 --gasprice '0' -unlock 0 --password passwd.txt --debug --mine --minerthreads '1' --etherbase 0 console
+
+
+
